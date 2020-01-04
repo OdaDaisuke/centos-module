@@ -1,0 +1,8 @@
+FROM centos:centos7
+RUN yum update -y
+RUN yum install -y rpmdevtools
+
+RUN mkdir -p /rpmbuild
+ADD ./ /rpmbuild/
+RUN chown root:root -R /rpmbuild
+CMD rpmbuild -ba /rpmbuild/SPECS/mackerel-agent.spec
