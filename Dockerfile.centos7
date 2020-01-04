@@ -5,4 +5,4 @@ RUN yum install -y rpmdevtools
 RUN mkdir -p /rpmbuild
 ADD ./ /rpmbuild/
 RUN chown root:root -R /rpmbuild
-CMD rpmbuild -ba /rpmbuild/SPECS/mackerel-agent.spec
+CMD rpmbuild -ba /rpmbuild/SPECS/nginx.spec
